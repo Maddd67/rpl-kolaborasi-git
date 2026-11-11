@@ -29,10 +29,15 @@ def beranda():
         salam=salam_waktu(sekarang.hour)
     )
 
-@app.route("/tentang")
+@app.route('/tentang')
 def tentang():
-    """Halaman tentang pembuat aplikasi (Latihan Mandiri 1)."""
-    return render_template("tentang.html")
+    # Daftar nama anggota tim (sesuaikan dengan nama Anda dan pasangan)
+    anggota_tim = ["Akhmad Aulia Nuur", "Ahmad "]
+    return render_template('tentang.html', anggota=anggota_tim)
+
+@app.route('/bantuan')
+def bantuan():
+    return render_template('bantuan.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
