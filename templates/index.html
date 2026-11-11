@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <title>Halo Sampit</title>
+</head>
+<body>
+    <h1>Halo Sampit!</h1>
+    <p>{{ salam }}. Waktu server: {{ waktu }}</p>
+
+    <form method="post">
+        <label for="nama">Nama Anda:</label>
+        <input type="text" id="nama" name="nama" required maxlength="50">
+        <button type="submit">Sapa</button>
+    </form>
+
+    {% if nama %}
+        <p>Halo, {{ nama }}!</p>
+    {% endif %}
+
+    <hr>
+    <nav>
+        <a href="/tentang">Tentang Pembuat Aplikasi</a>
+    </nav>
+</body>
+</html>
